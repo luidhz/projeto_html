@@ -171,13 +171,13 @@ header.dagaleria{
 div.galeria div.single-galeria:first-child{
     width: 35% !important;
 }
-div.galeria :hover div.single-galeria:first-child :hover{
+div.galeria:hover div.single-galeria:first-child{
     width: 20% !important;
 }
 div.galeria div.single-galeria:hover{
     width: 35% !important;
 }
-div.galeria div.single-galeria :first-child :hover{
+div.galeria div.single-galeria:first-child:hover{
     width: 35% !important;
 }
 
@@ -203,12 +203,19 @@ div.galeria div.single-galeria :first-child :hover{
     line-height: 28px;
     color: white;
  }
- .info a{
+ .info a {
     font-size: 14px;
     line-height: 28px;
     color: gold;
     text-decoration: none;
+    padding: 5px 15px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    background: transparent;
+    transition: all 0.3s ease;
  }
  .info a:hover{
-   text-decoration: underline; 
- }
+    background: gold;
+    color: black;
+    text-decoration: none;
+}
