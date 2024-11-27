@@ -9,14 +9,19 @@ hamMenu.addEventListener('click', () => {
 
 
 // JS da Galeria
-const images = document.querySelectorAll('.image-container img');
 
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        const star = image.parentElement.querySelector('.star');
-        star.classList.toggle('active');
-        // Aqui você pode adicionar a lógica para salvar os favoritos (localStorage, banco de dados, etc.)
-    });
-});
+  function toggleFavorite(button) {
+    // Alternar o estado de favoritado
+    button.classList.toggle("favorited");
+  
+    // Adicionar a classe de animação
+    button.classList.add("animate");
+  
+    // Remover a classe de animação após a conclusão
+    setTimeout(() => {
+      button.classList.remove("animate");
+    }, 500); // Duração da animação em milissegundos (0.5s)
+  }
+  
   
 // Fim do JS da Galeria  

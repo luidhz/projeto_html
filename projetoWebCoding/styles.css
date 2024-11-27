@@ -298,6 +298,7 @@ footer img {
 
 header.dagaleria{
     position: relative;
+    
 }
 .titulo{
     font-size: 16px;
@@ -390,31 +391,44 @@ div.galeria div.single-galeria:first-child:hover{
 }
 
 /* Adição de favoritar a imagem na galeria */
-.star {
-    width: 20px;
-    height: 20px;
-    background-image: url('estrela.png'); /* Substitua por sua imagem de estrela */
-    background-size: cover;
+.favorite-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.star.active {
-    opacity: 1;
-    animation: pulse 1s infinite alternate;
-}
-
-@keyframes pulse {
+    background: none;
+    border: 2px solid gray; /* Borda cinza para destacar */
+    border-radius: 40%; /* Formato circular */
+    font-size: 15px;
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0); /* Transparente inicialmente */
+    transition: color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    padding: 2px;
+  }
+  
+  .favorite-btn:hover {
+    border-color: red; /* Mudar a borda ao passar o mouse */
+  }
+  
+  .favorite-btn.favorited {
+    color: red; /* Fica vermelho ao ser favoritado */
+    border-color: red; /* Borda fica vermelha ao clicar */
+  }
+  
+  .favorite-btn.animate {
+    animation: pulse 0.5s ease;
+  }
+  
+  /* Animação de pulsar */
+  @keyframes pulse {
     0% {
-        transform: scale(1);
+      transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+      transform: scale(1.3);
     }
     100% {
-        transform: scale(1);
+      transform: scale(1);
     }
-}
+  }
+  
+  
