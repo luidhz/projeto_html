@@ -8,27 +8,26 @@
 </head>
 <body>
     <!--Código do header-->
-    <header class="dagaleria">
+    <header>
         <section>
-            <img src="cabeca-logo.png" alt="Logo com imagem de um rosto">
-            <img src="aura-logo.png" alt="Logo com o texto Aura">
-            <ul>
-                <li>Allan Dellon</li>
-                <li>Lucas Gomes</li>
-                <li>Luiz Henrique</li>
-                <li>Aquiles De Melo</li>
-                <li>Vinicius Barbosa</li>
-            </ul>
-            <nav>
+            <img src="cabeca-logo.png" alt="">
+            <img src="aura-logo.png" alt="">
+            <nav class="off-screen-menu">
                 <ul>
-                    <li><a href="main.html">Home</a></li>
-                    <li><a href="galeria.html">Galeria</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                </ul>
+                    <li><a href="main.html">Quem Somos?</a></li>
+                    <li><a href="galeria.html">Sobre Nós</a></li>
+                    <li><a href="cadastro.html">Entre em contato</a></li>
+                </ul> 
+            </nav>
+            <nav class="ham-menu">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </section>
     </header>
-
     <!--Código Galeria -->
 
 
@@ -39,6 +38,7 @@
 		<div class="galeria">
 			<div class="single-galeria">
 				<img src="Academia-Allan.jpg" alt="">
+				<div class="star"></div>
 				<div class="info">
 					<h1>Academia</h1>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facilis mollitia error distinctio aut natus consectetur quibusdam totam labore.</p>
@@ -47,6 +47,7 @@
 			</div>
 
 			<div class="single-galeria">
+				
 				<img src="CorridaAllan.jpeg" alt="">
 				<div class="info">
 					<h1>Corrida de Rua</h1>
@@ -57,6 +58,7 @@
 
 			<div class="single-galeria">
 				<img src="CapaEfootball-Allan.jpg" alt="">
+				
 				<div class="info">
 					<h1>Efootball</h1>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facilis mollitia error distinctio aut natus consectetur quibusdam totam labore.</p>
@@ -65,6 +67,7 @@
 			</div>
 
 			<div class="single-galeria">
+				
 				<img src="luta-Allan.jpg" alt="">
 				<div class="info">
 					<h1>Luta</h1>
@@ -74,6 +77,7 @@
 			</div>
 
 			<div class="single-galeria">
+				
 				<img src="Neymar-Allan.jpeg" alt="">
 				<div class="info">
 					<h1>Neymar Santista</h1>
@@ -310,29 +314,14 @@
 
     <!-- Fim Código Galeria -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--Código Do Rodapé-->
     <footer>
-        <section>
-            <p>Developed by</p>
+		<section>
+			<p>Developed by</p>
             <img src="cabeca-logo.png" alt="">
             <img src="aura-logo.png" alt="">
         </section>
     </footer>
+	<script src="script.js"></script>
 </body>
 </html>

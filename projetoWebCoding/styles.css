@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
  
 
@@ -10,61 +11,51 @@
 
 html {
     scroll-behavior: smooth;
-}
-body {
-    background-image: url(aura-logo.png);
-    background-size: 10%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: #F4F4F9;
 }
 
 header {
    position: fixed;
     height: 100px;
-    width: 1300px;
-    border: 3px solid black;
+    width: 99%;
+    border: 2px solid black;
     margin-left: 10px; /*Margem pra não encostar na borda*/
     display: flex;
-    border-radius: 80px;
-    margin-top: 20px; /*Margem pra não encostar em cima*/
-    z-index: 10;
-    background-color: white;
+    border-radius: 30px;
+    z-index: 1;
+    background-color: #F4F4F9;
 }
 
 header section {
     display: flex;
-    text-align: center;
-    width: 100%;
 }
 
 /*Configurações da imagem-logo*/
 header img {
-    width: 90px;
-    height: 92px;
-    border-radius: 100px;
-    margin: 1px;
+    width: 85px;
+    height: 80px;
     display: inline;
-    justify-content: center;
+    cursor: pointer;
+    margin: 7px;
+    border-radius: 50px;
 }
 
 header ul {
     display: flex;
     list-style: none;
-    gap: 9.5px;
 }
 /*Configurações dos nomes dos participantes*/
 header li {
-    color: rgb(0, 0, 0);
-    margin-top: 35px;
-    margin-left: 14px;
-    font-size: 14px;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 18px;
 }
 /*Destaque quando passar o mouse*/
 header li:hover {
-    font-size: 17px;
+    cursor: pointer;
+    font-size: 20px;
     transition: font-size 0.3s ease;
-    color: rgb(255, 0, 0);
+    color: rgba(10, 8, 150, 0.911);
 }
 /*Menu "Home", "Galeria"e"Cadastro"*/
 
@@ -81,27 +72,27 @@ nav a {
 main {
     padding-top: 120px;
     margin-bottom: 50px;
-    gap: 500px;
 }
-
-
-.integrantes  {
-    position: relative; 
-    margin-right: 1000px;
+.integrantes {
+    position: relative;
+    flex-wrap: wrap;
+    margin-right: 65%;
 }
 
 .integrantes img {
     margin-top: 10px;
     margin-left: 30px;
-    width: 220px;
+    width: 180px;
+    height: 250px;
     border-radius: 30px;
-    border: 3px solid rgb(0, 0, 0);
+    border: 2px solid rgba(26, 13, 143, 0.863);
     transition: 0.5s ease;
     margin-bottom: 20px;
 }
 
 .integrantes:hover img {
-    width: 300px;
+    width: 220px;
+    height: 300px;
     transition: 0.5s ease;
 }
 
@@ -109,15 +100,15 @@ main {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 300px;
-    width: 500px;
-    font-size: 20px;
+    height: 200px;
+    width: 400px;
+    font-size: 16px;
     transform: translateX(0);
     transition: transform 0.8s ease;
     padding: 1px;
-    margin-left: 20px;
+    margin-left: 10px;
     visibility: hidden;
-    color: red;
+    color: rgba(0, 0, 0, 0.966);
 }
 
 .integrantes:hover .descricao {
@@ -125,8 +116,81 @@ main {
     transform: translateX(65%);
 }
 
+
+.off-screen-menu {
+    height: 0;
+    position: fixed;
+    right: -630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .5s ease;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 30px;
+
+}
+
+.off-screen-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 1px;
+    list-style: none; 
+    margin: 0;
+}
+
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 60px;
+    position: relative;
+}
+
+.ham-menu span {
+    height: 4px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 44%;
+    transform: translate(-50%, -50%);
+    transition: .3 ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 54%;
+}
+.ham-menu span:nth-child(3) {
+    top: 64%;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 footer {
-    background-color: rgb(255, 255, 255);
+    background-color: #F4F4F9;
 }
 
 footer {
@@ -139,6 +203,96 @@ footer img {
     width: 100px;
 }
 
+/* Código CSS Cadastro */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.principal-cadastro {
+    width: 100%;
+    min-height: 100vh;
+    margin-left: 30%;
+}
+
+.container-cadastro {
+    background-color: white;
+    border-radius: 20px;
+    margin: 14px;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.header{
+    background: linear-gradient(to left, #390f86 0%, #000000 100%);
+    padding: 24px;
+    text-align: center;
+    color: white;
+}
+
+.form{
+    padding: 8px;
+}
+
+.form-content{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+.form-content label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.863);
+}
+
+.form-content a {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+   visibility: hidden;
+}
+
+.form button {
+    background: linear-gradient(to left, #22097c 0%, #000000 100%);
+    color: white;
+    width: 90%;
+    margin-left: 15px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-content.error input {
+    border-color: red;   
+}
+
+.form-content.error a {
+    border-color: red;   
+}
+
+.container-comentario {
+    background-color: white;
+    border-radius: 20px;
+    margin: 14px;
+    max-width: 600px;
+    width: 50%;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
+    overflow: hidden;
+}
 
 /* CSS DA GALERIA */
 
@@ -233,4 +387,32 @@ div.galeria div.single-galeria:first-child:hover{
     background: gold;
     color: black;
     text-decoration: none;
+}
+.star {
+    width: 20px;
+    height: 20px;
+    background-image: url('estrela.png'); /* Substitua por sua imagem de estrela */
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.star.active {
+    opacity: 1;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
