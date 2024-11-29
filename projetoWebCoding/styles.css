@@ -13,6 +13,10 @@ html {
     scroll-behavior: smooth;
     background-color: #F4F4F9;
 }
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
 
 header {
     position: fixed;
@@ -25,6 +29,29 @@ header {
     z-index: 1;
     background-color: #F4F4F9;
 }
+header section{
+    display: flex;
+}
+
+header .toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+header.dark-mode {
+    background-color: #1e1e1e;  /* Cor escura para o cabeçalho */
+    border: 3px solid white;     /* Borda branca no modo escuro */
+}
+
+/* Alterações para os itens do cabeçalho quando em dark mode */
+header.dark-mode ul li {
+    color: white; /* Títulos e textos em branco */
+}
+
+header.dark-mode nav a {
+    color: white; /* Links em branco no modo escuro */
+}
+
 
 header section {
     display: flex;
@@ -39,7 +66,9 @@ header img {
     margin: 7px;
     border-radius: 50px;
 }
-
+header.dark-mode img {
+    filter: brightness(0.7);
+}
 header ul {
     display: flex;
     list-style: none;
@@ -68,15 +97,46 @@ nav a {
     color: rgb(0, 0, 0);
     margin-left: 80px;
 }
+.langs {
+    text-align: center;
+    margin: 30px 10px;
+    padding: 10px 20px;
+}
 
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 3px;
+    font-weight: 650;
+    transition: .3s linear;
+}
+
+
+a.active{
+    background-color: #204829;
+}
 main {
     padding-top: 120px;
     margin-bottom: 50px;
 }
+.container-integrantes {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+}
+main.dark-mode {
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: white; /* Texto claro */
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .integrantes {
+    flex: 0 0 45%;
     position: relative;
-    flex-wrap: wrap;
-    margin-right: 65%;
 }
 
 .integrantes img {
@@ -188,11 +248,6 @@ nav {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-footer {
-    background-color: #F4F4F9;
-}
-
 footer {
     text-align: center;
 }
@@ -267,7 +322,7 @@ footer img {
 .form button {
     background: linear-gradient(to left, #22097c 0%, #000000 100%);
     color: white;
-    width: 90%;
+    width: 20%;
     margin-left: 15px;
     border-radius: 15px;
     padding: 10px;
@@ -314,6 +369,37 @@ header.dagaleria{
     justify-content: center;
     padding: 2%;
     margin-top: 0;
+}
+.toggle-button {
+    background-color: transparent; 
+    color: black; /* Cor do texto */
+    border: none; /* Remove a borda */
+    font-size: 14px; /* Tamanho de fonte discreto */
+    padding: 5px 15px; /* Padding para dar um espaço confortável */
+    cursor: pointer; /* Aparece como botão */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Coloca o botão no canto superior direito */
+}
+
+/* Mudança de cor ao passar o mouse */
+.toggle-button:hover {
+    background-color: #f0f0f0; /* Cor de fundo sutil */
+    color: #555; /* Cor de texto ao passar o mouse */
+}
+/* Estilo do botão */
+
+button {
+    margin: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #eacb30;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 .galeria{
     width: 100%;
@@ -422,5 +508,97 @@ div.galeria div.single-galeria:first-child:hover{
       transform: scale(1);
     }
   }
+  /* Fim CSS Galeria */
   
-  
+  /* Código CSS Cadastro */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.principal-cadastro {
+    width: 100%;
+    min-height: 100vh;
+    margin-left: 30%;
+}
+
+
+.container-cadastro {
+    background-color: white;
+    border-radius: 20px;
+    margin: 14px;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
+    overflow: hidden;
+    text-align: center;
+}
+
+.header{
+    background: linear-gradient(to left, #390f86 0%, #000000 100%);
+    padding: 24px;
+    text-align: center;
+    color: white;
+}
+
+.form{
+    padding: 4px;
+}
+
+.form-content{
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-content label{
+    display: inline-block;
+    margin-bottom: 4px;
+    
+}
+
+.form-content input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.863);
+}
+
+.form-content a {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form button {
+    background: linear-gradient(to left, #22097c 0%, #000000 100%);
+    color: white;
+    width: 90%;
+    margin-left: 15px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container-comentario {
+    background-color: white;
+    border-radius: 20px;
+    margin: 14px;
+    max-width: 600px;
+    width: 50%;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Exibir mensagens de erro quando a classe "error" estiver presente */
+.form-content.error .error-message {
+    visibility: visible;
+}
+

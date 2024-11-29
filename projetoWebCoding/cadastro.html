@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <title>Cadastro</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <button id="darkModeToggle">Dark Mode</button>
+        <section>
+            <img src="cabeca-logo.png" alt="">
+            <img src="aura-logo.png" alt="">
+            <nav class="off-screen-menu">
+                <ul>
+                    <li><a href="main.html">Quem Somos?</a></li>
+                    <li><a href="galeria.html">Sobre Nós</a></li>
+                    <li><a href="cadastro.html">Entre em contato</a></li>
+                </ul> 
+            </nav>
+            <nav class="ham-menu">
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Seção Principal -->
+    <main class="principal-cadastro">
+        <div class="container-cadastro">
+            <section class="header">
+                <h2>Criar Conta</h2>
+            </section>
+
+            <!-- Formulário de Cadastro -->
+            <form id="form-cadastro" class="form">
+                <div class="form-content">
+                    <label for="username">Nome do usuário</label>
+                    <input type="text" id="username" placeholder="Digite seu nome" required>
+                    <a href="">Mensagem de erro</a>
+                </div>
+                <div class="form-content">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                    <a href="">Mensagem de erro</a>
+                </div>
+                <div class="form-content">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <div>
+                        <label for="botaoMostrarSenha" class="legenda">Mostrar Senha</label>
+                        <input type="checkbox" id="botaoMostrarSenha" required>
+                    </div>
+                    <a href="">Mensagem de erro</a>
+                </div>
+                <div class="form-content">
+                    <label for="password-confirmation">Confirme sua senha</label>
+                    <input type="password" id="password-confirmation" placeholder="Digite sua senha" required>
+                    <a href="">Mensagem de erro</a>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <!-- Código Comentário -->
+    <div class="container-comentario">
+        <section class="header">
+            <h2>Comentário</h2>
+        </section>
+
+        <form id="form" class="form">
+            <div class="form-content">
+                <label for="username">Nome do usuário</label>
+                <input type="text" id="username" placeholder="Digite seu nome" required>
+            </div>
+        </form>
+
+        <form id="form" class="form">
+            <div class="form-content">
+                <label for="comment">Digite seu Comentário</label>
+                <input type="comment" id="comment" placeholder="Digite seu Comentário..." required>
+            </div>
+            <button id="botao-enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <section>
+            <p>Developed by</p>
+            <img src="cabeca-logo.png" alt="">
+            <img src="aura-logo.png" alt="">
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
