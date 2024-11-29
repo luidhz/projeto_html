@@ -9,6 +9,26 @@ hamMenu.addEventListener('click', () => {
 })
 // FIM JS MENU 3 NAS TELAS
 
+// Código Saiba Mais
+const botoes = document.querySelectorAll('.mostrarTexto'); // Seleciona todos os botões
+const textos = document.querySelectorAll('.texto'); // Seleciona todos os textos
+
+// Adiciona o evento de clique a cada botão
+botoes.forEach((botao, index) => {
+    botao.addEventListener('click', () => {
+        const texto = textos[index]; // Seleciona o texto correspondente ao botão
+        if (texto.style.display === 'none') {
+            texto.style.display = 'block'; // Mostra o texto
+            botao.textContent = 'Ocultar texto'; // Altera o texto do botão
+        } else {
+            texto.style.display = 'none'; // Oculta o texto
+            botao.textContent = 'Clique aqui'; // Restaura o texto do botão
+        }
+    });
+});
+
+
+
 
 // DARK MODE
 const toggleDarkModeButton = document.getElementById('darkModeToggle');
@@ -61,19 +81,6 @@ toggleDarkModeButton.addEventListener('click', () => {
     }
 });
 //FIM DARK MODE
-
-// Mostrar/Ocultar Senha 
-const campoSenha = document.querySelector("#password"); // Ajustado para corresponder ao ID no HTML
-const botaoMostrarSenha = document.querySelector("#botaoMostrarSenha");
-const legenda = document.querySelector(".legenda");
-
-botaoMostrarSenha.addEventListener("click", function () {
-    const estadoAtualDoCampoDeSenha = campoSenha.getAttribute("type") === "password" ? "text" : "password";
-
-    campoSenha.setAttribute("type", estadoAtualDoCampoDeSenha);
-
-    legenda.innerHTML = estadoAtualDoCampoDeSenha === "password" ? "Mostrar Senha" : "Ocultar Senha";
-});
 
 // Seleciona o formulário e os campos necessários
 const form = document.getElementById('form-cadastro');
@@ -131,6 +138,20 @@ form.addEventListener('submit', (event) => {
 
 
 // Linguagens
+
+// Mostrar/Ocultar Senha 
+const campoSenha = document.querySelector("#password"); // Ajustado para corresponder ao ID no HTML
+const botaoMostrarSenha = document.querySelector("#botaoMostrarSenha");
+const legenda = document.querySelector(".legenda");
+
+botaoMostrarSenha.addEventListener("click", function () {
+    const estadoAtualDoCampoDeSenha = campoSenha.getAttribute("type") === "password" ? "text" : "password";
+
+    campoSenha.setAttribute("type", estadoAtualDoCampoDeSenha);
+
+    legenda.innerHTML = estadoAtualDoCampoDeSenha === "password" ? "Mostrar Senha" : "Ocultar Senha";
+});
+
 
 
 
